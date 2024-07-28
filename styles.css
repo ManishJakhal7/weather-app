@@ -1,0 +1,22 @@
+.footer{
+      position: fixed;
+      left: 0%;
+      bottom: 0%;
+      width: 100%;
+      text-align: center;
+      background-color: rgb(42, 165, 67);
+}
+#weather-data{
+      background-image: url('./icons8-cloud-and-sun-64.png');
+      background-size: 100px 100px; /* set the size of the image */
+      background-repeat: no-repeat; /* prevent the image from repeating */
+      background-position: left top; 
+      display: flex;
+      display: inline-block;
+      margin:20px;
+      padding: 100px;
+      font-size: large;
+      background-color: rgb(223, 243, 243);
+
+}
+
