@@ -4,8 +4,8 @@ const apiKey = 'b2f13b9b8cmshc4c764fc359fd3ap10eddejsna062aaa34762';
 const apiHost = 'weatherapi-com.p.rapidapi.com';
 
 const cityform = document.getElementById('d-flex');
-const weatherDataContainer = document.getElementById('weather-data');
-
+const weatherDataContainer = document.getElementById("weather-data");
+const weatherDataContainer2 = document.getElementById("weather2data");
 cityform.addEventListener('submit',async(e)=>{
    e.preventDefault();
    const cityInput = document.getElementById('city');
@@ -27,10 +27,6 @@ cityform.addEventListener('submit',async(e)=>{
           console.log(data);
           const lat = data[0].latitude;
           const long = data[0].longitude;
-          const state = data[0].state;
-          const country = data[0].country;
-          const cityname = data[0].name;
-        
         
           const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${lat}%2C${long}`;
           const options = {
@@ -48,20 +44,34 @@ cityform.addEventListener('submit',async(e)=>{
               return response.json(); // parse response as JSON
             })
             .then(data => {
-              /* const tempf = data.main.temp;
-               const tempc = (tempf-32)*5/9;
-               const weatherDataHTML =`
-                  <h2>Weather in ${city}</h2>
-                 <p>Temperature: ${tempc.toFixed(2)}°C</p>
-                 <p>Humidity: ${data.main.humidity}%</p>
-                  <p>Weather Condition: ${data.weather[0].description}</p>
-                  <p>Wind:${data.wind.speed}</p>
-                  <p>Pressure:${data.main.pressure}</p>
-                 
+              /* const description = data.condition.text;
+               const tempc = data.condition.temp_c;
+               const city = data.location.name;
+               const state = data.location.region;
+               const country = data.location.country; 
+               const time = data.location.localtime;
+               const gust = data.condition.gust_kph;
+               const dew = data.condition.dewpoint_c;
+               
+               const humidity = data.condition.humidity;
+               const pressure = data.condition.pressure_mb;
+               const wind = wind_kph; 
+               
+               */
+               // const current = data.current.condition;
+                // const location = data.location;
+               const weatherdata =`
+                  <h2>Weather in ${data.location.name}</h2>
+                   <p> <span className="image-holder"></span>Temperature:${data.current.temp_c}°C</p>  
+                 <p>Humidity: ${data.current.humidity}%</p>
+                  <p>Wind:span<className="image-holder"></span>${data.current.wind_kph}</p>
+                  <p>Pressure:${data.current.pressure_mb}</p>
+                  <p>visibility:${data.current.vis_km}</p>
+                   <p>UV:${data.current.uv}
+                   </p>gust:${data.current.gust_kph} <p></p> <p></p> <p></p> <p></p> <p></p> <p></p>
+
                  `; 
-      
-                 weatherDataContainer.innerHTML = weatherDataHTML;
-             */
+                  weatherDataContainer.innerHTML = weatherdata;
                  console.log(data); // data is now a JSON object
             }) 
             .catch(error => {
@@ -72,7 +82,7 @@ cityform.addEventListener('submit',async(e)=>{
         }) 
 
    }
-   else {
+  /* else {
        weatherDataContainer.innerHTML = 'Please enter a city name.';
-   }
+   } */
 });

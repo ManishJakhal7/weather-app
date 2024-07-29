@@ -7,16 +7,21 @@
       background-color: rgb(42, 165, 67);
 }
 #weather-data{
-      background-image: url('./icons8-cloud-and-sun-64.png');
-      background-size: 100px 100px; /* set the size of the image */
+      background-image: url('./istockphoto-1330807591-612x612.jpg');
+
+      background-size: cover; /* set the size of the image */
       background-repeat: no-repeat; /* prevent the image from repeating */
       background-position: left top; 
+      height: fit-content;
+      width: 100vw;
       display: flex;
       display: inline-block;
-      margin:20px;
-      padding: 100px;
+      margin:0;
+      padding: 0;
       font-size: large;
-      background-color: rgb(223, 243, 243);
-
+      
+}
+.image-holder{
+      background-image: url("./icons8-cloud-and-sun-64.png");
 }
 
