@@ -48,20 +48,7 @@ cityform.addEventListener('submit',async(e)=>{
               return response.json(); // parse response as JSON
             })
             .then(data => {
-              /* const description = data.condition.text;
-               const tempc = data.condition.temp_c;
-               const city = data.location.name;
-               const state = data.location.region;
-               const country = data.location.country; 
-               const time = data.location.localtime;
-               const gust = data.condition.gust_kph;
-               const dew = data.condition.dewpoint_c;
-               
-               const humidity = data.condition.humidity;
-               const pressure = data.condition.pressure_mb;
-               const wind = wind_kph; 
-               
-
+              /* 
                <h1>Weather in ${data.location.name}</h1>
                    <p> <span className="image-holder"></span>Temperature:${data.current.temp_c}°C</p>  
                  <p>Humidity: ${data.current.humidity}%</p>
@@ -72,11 +59,15 @@ cityform.addEventListener('submit',async(e)=>{
                    </p>gust:${data.current.gust_kph} <p></p> <p></p> <p></p> <p></p> <p></p> <p></p>
 
                */
-               // const current = data.current.condition;
-                // const location = data.location; 
                  // weatherDataContainer.innerHTML = weatherdata;
-                  
-                 stripe.innerHTML = data.location.name;
+                  const name = data.location.name;
+                  const state = data.location.region;
+                  const time = data.location.localtime; 
+                  const country = data.location.country;
+                  const locationdata = `
+                     <p>${name}, ${state}, ${country} As of ${time}</p>    
+                  `;
+                 stripe.innerHTML = locationdata;
                  tempc.innerHTML = `<p>${data.current.temp_c}°C</p>`;
                  context.innerHTML = data.current.condition.text;
                  icon.innerHTML = `<img src="${data.current.condition.icon}" alt="Image">`;
