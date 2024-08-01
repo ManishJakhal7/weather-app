@@ -12,16 +12,30 @@
       background-size: cover; /* set the size of the image */
       background-repeat: no-repeat; /* prevent the image from repeating */
       background-position: left top; 
-      height: fit-content;
+      justify-content: center;
+      padding: 50px;
+      height: 350px;
       width: 100vw;
       display: flex;
-      display: inline-block;
+      justify-items: left;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
       margin:0;
       padding: 0;
       font-size: large;
-      
+      color: aliceblue;
 }
 .image-holder{
       background-image: url("./icons8-cloud-and-sun-64.png");
 }
+#weather2data{
+      display: block;
+      height: 300px;
+      width: 400px;
+      margin: 40px;
+      padding: 0;
+      margin-left: 380px;
+      background-color: rgb(211, 210, 217);
 
+}

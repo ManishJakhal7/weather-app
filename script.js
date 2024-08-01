@@ -6,6 +6,10 @@ const apiHost = 'weatherapi-com.p.rapidapi.com';
 const cityform = document.getElementById('d-flex');
 const weatherDataContainer = document.getElementById("weather-data");
 const weatherDataContainer2 = document.getElementById("weather2data");
+const stripe = document.getElementById("l-stripe");
+const tempc = document.getElementById("tempc");
+const context = document.getElementById("context");
+const icon = document.getElementById("icon");
 cityform.addEventListener('submit',async(e)=>{
    e.preventDefault();
    const cityInput = document.getElementById('city');
@@ -57,11 +61,8 @@ cityform.addEventListener('submit',async(e)=>{
                const pressure = data.condition.pressure_mb;
                const wind = wind_kph; 
                
-               */
-               // const current = data.current.condition;
-                // const location = data.location;
-               const weatherdata =`
-                  <h2>Weather in ${data.location.name}</h2>
+
+               <h1>Weather in ${data.location.name}</h1>
                    <p> <span className="image-holder"></span>Temperature:${data.current.temp_c}°C</p>  
                  <p>Humidity: ${data.current.humidity}%</p>
                   <p>Wind:span<className="image-holder"></span>${data.current.wind_kph}</p>
@@ -70,8 +71,15 @@ cityform.addEventListener('submit',async(e)=>{
                    <p>UV:${data.current.uv}
                    </p>gust:${data.current.gust_kph} <p></p> <p></p> <p></p> <p></p> <p></p> <p></p>
 
-                 `; 
-                  weatherDataContainer.innerHTML = weatherdata;
+               */
+               // const current = data.current.condition;
+                // const location = data.location; 
+                 // weatherDataContainer.innerHTML = weatherdata;
+                  
+                 stripe.innerHTML = data.location.name;
+                 tempc.innerHTML = `<p>${data.current.temp_c}°C</p>`;
+                 context.innerHTML = data.current.condition.text;
+                 icon.innerHTML = `<img src="${data.current.condition.icon}" alt="Image">`;
                  console.log(data); // data is now a JSON object
             }) 
             .catch(error => {
