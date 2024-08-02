@@ -68,22 +68,131 @@ body{
 }
 #reelfeel{
        display: block;
+       padding: 30px;
        padding-left: 20px;
       font-size: 50px;
 }
- #wind{
-      margin-top: 30px;
+ #wind, #humidity, #dewpoint, #pressure, #uvindex, #visibility, #gust {
+      display: inline-block;
+      padding-top: 20px;
+      margin-top: 20px;
+      margin-left: 5px;;
+
  }
-   #wind img{
+   #wind img,  #humidity img, #dewpoint img, #pressure img, #uvindex img, #visibility img, #gust img{
        height: 20px;
        width: 20px;
-       margin-top: 20px;
-       margin-left: 20px;
-       
+       margin-top: 10px;
+       margin-left: 5px;
       }
-      .line{
-            position: relative;
+      .line {
             border-bottom: 1px solid #ccc;
 
       }
+        
+      /* FOOTER HERE*/
+      /* Footer Styles */
+
+footer {
+      background-color: #333; /* Dark gray background */
+      color: #fff; /* White text color */
+      padding: 20px; /* Add some padding to make it look nice */
+      clear: both; /* Clear any floats */
+      display: flex; /* Make it a flex container */
+      flex-wrap: wrap; /* Allow elements to wrap to the next line */
+      justify-content: space-between; /* Distribute elements evenly */
+      align-items: center; /* Vertically center elements */
+    }
     
+    /* Footer Sections */
+    
+    footer > * {
+      margin: 10px; /* Add some margin to each section */
+    }
+    
+    /* Copyright Section */
+    
+    .copyright {
+      font-size: 14px; /* Smaller font size */
+      color: #ccc; /* Light gray text color */
+    }
+    
+    /* Social Media Section */
+    
+    .social-media {
+      display: flex; /* Make it a flex container */
+      align-items: center; /* Vertically center elements */
+    }
+    
+    .social-media a {
+      margin: 0 10px; /* Add some margin between icons */
+      font-size: 18px; /* Larger font size for icons */
+      color: #fff; /* White text color */
+      transition: color 0.2s ease; /* Add a transition effect */
+    }
+    
+    .social-media a:hover {
+      color: #ccc; /* Light gray text color on hover */
+    }
+    
+    /* Links Section */
+    
+    .links {
+      display: flex; /* Make it a flex container */
+      flex-wrap: wrap; /* Allow elements to wrap to the next line */
+      justify-content: space-between; /* Distribute elements evenly */
+    }
+    
+    .links a {
+      margin: 0 10px; /* Add some margin between links */
+      font-size: 16px; /* Medium font size */
+      color: #fff; /* White text color */
+      transition: color 0.2s ease; /* Add a transition effect */
+    }
+    
+    .links a:hover {
+      color: #ccc; /* Light gray text color on hover */
+    }
+    
+    /* Contact Information Section */
+    
+    .contact-info {
+      font-size: 16px; /* Medium font size */
+      color: #fff; /* White text color */
+    }
+    
+    .contact-info a {
+      color: #fff; /* White text color */
+      transition: color 0.2s ease; /* Add a transition effect */
+    }
+    
+    .contact-info a:hover {
+      color: #ccc; /* Light gray text color on hover */
+    }
+    
+    /* Newsletter Section */
+    
+    .newsletter {
+      display: flex; /* Make it a flex container */
+      align-items: center; /* Vertically center elements */
+    }
+    
+    .newsletter input[type="email"] {
+      padding: 10px; /* Add some padding to the input field */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Add a rounded corner */
+      font-size: 16px; /* Medium font size */
+    }
+    
+    .newsletter button[type="submit"] {
+      background-color: #4CAF50; /* Green background color */
+      color: #fff; /* White text color */
+      padding: 10px 20px; /* Add some padding to the button */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Add a rounded corner */
+      cursor: pointer; /* Change cursor to a pointer */
+    }
+    
+    .newsletter button[type="submit"]:hover {
+      background-color: #3e8e41; /* Darker green background color on hover */
+    }

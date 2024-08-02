@@ -78,28 +78,21 @@ cityform.addEventListener('submit',async(e)=>{
             
                  
                 const wind =  document.getElementById('wind');
-                wind.innerHTML=`<img src="https://cdn-icons-png.flaticon.com/128/2011/2011448.png">&nbsp Wind &nbsp &nbsp &nbsp &nbsp ${data.current.wind_dir} &nbsp ${data.current.wind_kph} km/h`;
+                wind.innerHTML=`<img src="https://cdn-icons-png.flaticon.com/128/2011/2011448.png"> Wind &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ${data.current.wind_dir}&nbsp${data.current.wind_kph} km/h`;
               
 
-                document.getElementById("humidity").innerHTML=`Humidity: ${data.current.humidity}%`;
+                document.getElementById("humidity").innerHTML=`<img src="https://cdn-icons-png.flaticon.com/128/727/727790.png"> Humidity: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  ${data.current.humidity}%`;
 
-                document.getElementById("dewpoint").innerHTML=`Dew Point: ${data.current.dewpoint_c}`;
+                document.getElementById("dewpoint").innerHTML=`<img src ="https://cdn-icons-png.flaticon.com/128/4867/4867878.png"> Dew Point: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ${data.current.dewpoint_c}°`;
 
-                document.getElementById('pressure').innerHTML=`Pressure: ${data.current.pressure_mb}`;
+                document.getElementById('pressure').innerHTML=`<img src="https://cdn-icons-png.flaticon.com/128/13994/13994921.png"> Pressure: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ↑ ${data.current.pressure_mb}mb`;
 
-                document.getElementById('uvindex').innerHTML=`UV Index: ${data.current.uv}`;
+                document.getElementById('uvindex').innerHTML=`<img src="https://cdn-icons-png.flaticon.com/128/5587/5587255.png"> UV Index: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ${data.current.uv} of 11 `;
 
-                document.getElementById('visibility').innerHTML=`Visibility: ${data.current.vis_km}KM`;
+                document.getElementById('visibility').innerHTML=`<img src="https://cdn-icons-png.flaticon.com/128/535/535193.png"> Visibility: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ${data.current.vis_km}km`;
 
-                document.getElementById('gust').innerHTML=`Wind Gust: ${data.current.gust_kph}`;
+                document.getElementById('gust').innerHTML=`<img src="https://cdn-icons-png.flaticon.com/128/14059/14059195.png"> Wind Gust: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ${data.current.gust_kph}km/h`;
         
-                
-
-                
-
-
-
-
 
                  console.log(data); // data is now a JSON object
             }) 
