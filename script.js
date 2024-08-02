@@ -10,6 +10,7 @@ const stripe = document.getElementById("l-stripe");
 const tempc = document.getElementById("tempc");
 const context = document.getElementById("context");
 const icon = document.getElementById("icon");
+const feel = document.getElementById("reelfeel");
 cityform.addEventListener('submit',async(e)=>{
    e.preventDefault();
    const cityInput = document.getElementById('city');
@@ -64,6 +65,7 @@ cityform.addEventListener('submit',async(e)=>{
                   const state = data.location.region;
                   const time = data.location.localtime; 
                   const country = data.location.country;
+                  const rfeel = data.current.feelslike_c;
                   const locationdata = `
                      <p>${name}, ${state}, ${country} As of ${time}</p>    
                   `;
@@ -71,6 +73,34 @@ cityform.addEventListener('submit',async(e)=>{
                  tempc.innerHTML = `<p>${data.current.temp_c}°C</p>`;
                  context.innerHTML = data.current.condition.text;
                  icon.innerHTML = `<img src="${data.current.condition.icon}" alt="Image">`;
+                 feel.innerHTML= `${rfeel}°C`;
+                  
+            
+                 
+                const wind =  document.getElementById('wind');
+                wind.innerHTML=`<img src="https://cdn-icons-png.flaticon.com/128/2011/2011448.png">&nbsp Wind &nbsp &nbsp &nbsp &nbsp ${data.current.wind_dir} &nbsp ${data.current.wind_kph} km/h`;
+              
+
+                document.getElementById("humidity").innerHTML=`Humidity: ${data.current.humidity}%`;
+
+                document.getElementById("dewpoint").innerHTML=`Dew Point: ${data.current.dewpoint_c}`;
+
+                document.getElementById('pressure').innerHTML=`Pressure: ${data.current.pressure_mb}`;
+
+                document.getElementById('uvindex').innerHTML=`UV Index: ${data.current.uv}`;
+
+                document.getElementById('visibility').innerHTML=`Visibility: ${data.current.vis_km}KM`;
+
+                document.getElementById('gust').innerHTML=`Wind Gust: ${data.current.gust_kph}`;
+        
+                
+
+                
+
+
+
+
+
                  console.log(data); // data is now a JSON object
             }) 
             .catch(error => {
